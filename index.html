@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+
+<html lang="pt-br">
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Braza - O seu visualizador de contas do GitHub!</title>
+
+    <link rel="icon" href="./resources/images/favicon.png">
+    <link rel="stylesheet" href="./resources/css/index.css">
+
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500&family=Teko:wght@400;500&display=swap">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Poppins&family=Roboto:wght@400;500&family=Teko:wght@400;500&display=swap">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Rounded:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@48,400,0,0" />
+  </head>
+  <body>
+
+    <section class="section-loading-page">
+      <div class="section-loading-page-loader"></div>
+    </section>
+
+    <nav>
+      <div class="navbar-logo">
+        <img src="./resources/images/favicon.png" alt="">
+        <h1>BRAZA</h1>
+      </div>
+
+      <div class="navbar-photo-profile">
+        <div class="navbar-photo-profile-card"></div>
+      </div>
+
+      <div class="navbar-profile-name">
+        <p id="profile-name">Nome do usuário</p>
+      </div>
+
+      <div class="navbar-optins-list">
+        <ul>
+          <a id="a-view-profile" href="#" target="_blank"><li><span class="material-symbols-outlined">login</span>&nbsp&nbsp&nbspVer perfil</li></a>
+          <a id="a-view-repos" href="#" target="_blank"><li><span class="material-symbols-outlined">token</span>&nbsp&nbsp&nbspVer repositórios</li></a>
+          <a id="a-view-followers" href="#" target="_blank"><li><span class="material-symbols-outlined">groups</span>&nbsp&nbsp&nbspVer seguidores</li></a>
+          <a id="a-view-followings" href="#" target="_blank"><li><span class="material-symbols-outlined">favorite</span>&nbsp&nbsp&nbspVer seguindo</li></a>
+          <a href="https://github.com/teuscode/braza-app.github.io" target="_blank"><li id="contribution"><span class="material-symbols-outlined">handshake</span>&nbsp&nbspContribuir</li></a>
+        </ul>
+      </div>
+
+    </nav>
+
+    <main>
+      <header>
+        <div class="main-search-input">
+          <div class="main-search-input-icon">
+            <span class="material-symbols-outlined">search</span>
+          </div>
+          <input id="search-input" type="text" placeholder="Pesquisar conta no GitHub">
+        </div>
+
+        <div class="main-search-input-options">
+          <span title="Recarregar site" id="button-reload-app" class="material-symbols-outlined">refresh</span>
+          <span title="Maximizar tela" id="button-full-screen" class="material-symbols-outlined">open_in_full</span>
+        </div>
+      </header>
+      <section class="data-1">
+        <div class="section-title">
+          <p id="section-title-text"><b>Dados do usuário</b></p>
+          <p id="response-error-request">Conta não encontrada</p>
+        </div>
+
+        <div class="section-datas-extras">
+          <div class="section-data-extras-card">
+            <p><b>Nome: </b><span id="data-extra-name">Usuário não pesquisado</span></p>
+            <p><b>ID do usuário: </b><span id="data-extra-id">Usuário não pesquisado</span></p>
+            <p><b>E-mail: </b><span id="data-extra-email">Usuário não pesquisado</span></p>
+          </div>
+          <div class="section-data-extras-card">
+            <p><b>Localização: </b><span id="data-extra-location">Usuário não pesquisado</span></p>
+            <p><b>Biografia: </b><span id="data-extra-bio">Usuário não pesquisado</span></p>
+            <p><b>Empresa: </b><span id="data-extra-company">Usuário não pesquisado</span></p>
+          </div>
+
+        </div>
+
+        <div class="data-1-cards">
+          <div class="section-cards-data">
+            <div class="card">
+              <div class="card-icon"><span class="material-symbols-outlined">token</span></div>
+              <div class="card-title"><b>Quantidade de repositórios</b></div>
+              <div class="card-count"><span id="results-count-repos">0</span></div>
+              <div class="card-description-data"><p>repositórios encontrados</p></div>
+            </div>
+          </div>
+          <div class="section-cards-data">
+            <div class="card">
+              <div class="card-icon"><span class="material-symbols-outlined">groups</span></div>
+              <div class="card-title"><b>Quantidade de seguidores</b></div>
+              <div class="card-count"><span id="results-count-followers">0</span></div>
+              <div class="card-description-data"><p>seguidores encontrados</p></div>
+            </div>
+          </div>
+          <div class="section-cards-data">
+            <div class="card">
+              <div class="card-icon"><span class="material-symbols-outlined">how_to_reg</span></div>
+              <div class="card-title"><b>Quantidade de pessoas que a conta segue</b></div>
+              <div class="card-count"><span id="results-count-followings">0</span></div>
+              <div class="card-description-data"><p>contas encontradas</p></div>
+            </div>
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <script src="https://code.jquery.com/jquery-3.6.1.js"></script>
+    <script src="./resources/js/index.js"></script>
+  </body>
+</html>
